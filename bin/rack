@@ -10,7 +10,8 @@ if ARGV[0] == "new"
     system "cp #{root}/../lib/config.ru #{directory}/config.ru"
     system "cp #{root}/../lib/index.html #{directory}/public/index.html"
     system "cp #{root}/../lib/app.js #{directory}/public/js/app.js"
-	  puts system "cd #{directory} && bundle init"
+    system "cp #{root}/../lib/Gemfile #{directory}/Gemfile"
+	  puts system "cd #{directory} && bundle init && bundle install"
 	else
 		puts "A directory called #{directory} already exists."
 	end 

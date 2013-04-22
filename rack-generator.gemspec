@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Rack::Generator::VERSION
   spec.authors       = ["Steven Zeiler"]
   spec.email         = ["zeiler.steven@gmail.com"]
-  spec.description   = %q{A gem to generate the most basic static rack app}
-  spec.summary       = %q{rack new appname}
+  spec.description   = %q{A gem to generate the most basic static}
+  spec.summary       = %q{Write a gem summary}
   spec.homepage      = ""
   spec.license       = "MIT"
 
