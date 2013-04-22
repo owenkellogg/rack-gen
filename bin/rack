@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+
+root = File.dirname(__FILE__)
+
+if ARGV[0] == "new"
+	directory = ARGV[1]
+	if system "mkdir #{directory}"
+	  system "mkdir -p #{directory}/public/{images,js,css}"
+	  system "touch #{directory}/{config.ru,public/index.html}"
+    system "cp #{root}/../lib/config.ru #{directory}/config.ru"
+    system "cp #{root}/../lib/index.html #{directory}/public/index.html"
+    system "cp #{root}/../lib/app.js #{directory}/public/js/app.js"
+	  puts system "cd #{directory} && bundle init"
+	else
+		puts "A directory called #{directory} already exists."
+	end 
+end 
