@@ -4,6 +4,12 @@ Rack Generator is used to create the most basic ruby web application using the r
 
 Rack is the underlying technology behind popular web ruby frameworks like sinatra and rails. The gem was designed to be the perfect tool for introducing students to ruby on the web and get them started with basic html, css, and javascript
 
+## INSTALLATION
+
+    git clone https://github.com/stevenzeiler/rack-generator.git
+    gem build rack-generator.gemspec
+    gem install rack-generator-0.0.2.gem
+
 ## USAGE
 
 Generate a new rack application, which consists of three files.
