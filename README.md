@@ -14,7 +14,7 @@ Rack is the underlying technology behind popular web ruby frameworks like sinatr
 
 Generate a new rack application, which consists of three files.
 
-	  rack new myappname
+	  rack new myappname --heroku
   
 You will see output from several operations, which will are explained below
 
