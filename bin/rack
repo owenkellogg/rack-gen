@@ -5,9 +5,9 @@ root = File.dirname(__FILE__)
 if ARGV[0] == "new"
 	directory = ARGV[1]
 	if system "mkdir -p #{directory}/public"
-    system "cp #{root}/../lib/config.ru #{directory}/config.ru"
-    system "cp #{root}/../lib/index.html #{directory}/index.html"
-    system "cp #{root}/../lib/Gemfile #{directory}/Gemfile"
+    system "cp #{root}/../lib/templates/config.ru #{directory}/config.ru"
+    system "cp #{root}/../lib/templates/index.html #{directory}/index.html"
+    system "cp #{root}/../lib/templates/Gemfile #{directory}/Gemfile"
 	  system "cd #{directory} && git init && bundle install"
     system "cd #{directory} && git add . && git commit -m 'add most basic rack app'"
     system "cd #{directory} && heroku create && git push heroku master && heroku open"
