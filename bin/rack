@@ -4,14 +4,13 @@ root = File.dirname(__FILE__)
 
 if ARGV[0] == "new"
 	directory = ARGV[1]
-	if system "mkdir #{directory}"
-	  system "mkdir -p #{directory}/public/{images,js,css}"
-	  system "touch #{directory}/{config.ru,public/index.html}"
+	if system "mkdir -p #{directory}/public"
     system "cp #{root}/../lib/config.ru #{directory}/config.ru"
-    system "cp #{root}/../lib/index.html #{directory}/public/index.html"
-    system "cp #{root}/../lib/app.js #{directory}/public/js/app.js"
+    system "cp #{root}/../lib/index.html #{directory}/index.html"
     system "cp #{root}/../lib/Gemfile #{directory}/Gemfile"
-	  system "cd #{directory} && bundle install"
+	  system "cd #{directory} && git init && bundle install"
+    system "cd #{directory} && git add . && git commit -m 'add most basic rack app'"
+    system "cd #{directory} && heroku create && git push heroku master && heroku open"
 	else
 		puts "A directory called #{directory} already exists."
 	end 
