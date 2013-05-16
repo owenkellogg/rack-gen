@@ -8,7 +8,7 @@ Rack is the underlying technology behind popular web ruby frameworks like sinatr
 
     git clone https://github.com/stevenzeiler/rack-generator.git
     gem build rack-generator.gemspec
-    gem install rack-generator-0.0.2.gem
+    gem install rack-generator-0.2.0.gem
 
 ## USAGE
 
