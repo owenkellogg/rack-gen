@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "rack-generator"
-  spec.version       = "0.0.2"
+  spec.version       = "0.2.0"
   spec.authors       = ["Steven Zeiler"]
   spec.email         = ["zeiler.steven@gmail.com"]
   spec.description   = %q{A gem to generate the most basic static}
@@ -19,6 +19,7 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
+  spec.add_development_dependency "trollop"
 
   spec.executables << 'rack'
 end

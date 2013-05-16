@@ -1,6 +1,13 @@
 #!/usr/bin/env ruby
 
+require 'trollop'
+
+opts = Trollop::options do
+  opt :heroku, "Create heroku app" # flag --heroku, default false
+end
+
 root = File.dirname(__FILE__)
+
 
 if ARGV[0] == "new"
 	directory = ARGV[1]
@@ -10,7 +17,10 @@ if ARGV[0] == "new"
     system "cp #{root}/../lib/templates/Gemfile #{directory}/Gemfile"
 	  system "cd #{directory} && git init && bundle install"
     system "cd #{directory} && git add . && git commit -m 'add most basic rack app'"
-    system "cd #{directory} && heroku create && git push heroku master && heroku open"
+
+    if opts[:heroku]
+      system "cd #{directory} && heroku create && git push heroku master && heroku open"
+    end 
 	else
 		puts "A directory called #{directory} already exists."
 	end 
