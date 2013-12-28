@@ -6,15 +6,25 @@ Rack is the underlying technology behind popular web ruby frameworks like sinatr
 
 ## INSTALLATION
 
-    git clone https://github.com/stevenzeiler/rack-generator.git
-    gem build rack-generator.gemspec
-    gem install rack-generator-0.2.0.gem
+    gem install rack-gen
 
 ## USAGE
 
 Generate a new rack application, which consists of three files.
 
+    rack new somebasicwebapp
+
+OR 
+
 	  rack new myappname --heroku
+
+Which will create a heroku app and push the basic app live to the heroku app.
+Once you have created the new app, replace index.html with your own index page and move all your other public web files into the public directory. Once you files are in place, commit them to git and push them to heroku to deploy: `git push heroku master` if you have already set up a heroku app.
+
+## Running the app
+Use the `rackup` command to run your webserver
+
+    rackup
   
 You will see output from several operations, which will are explained below
 
