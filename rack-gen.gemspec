@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "rack-gen"
-  spec.version       = "0.3.0"
+  spec.version       = "0.4.0"
   spec.authors       = ["Steven Zeiler"]
   spec.email         = ["zeiler.steven@gmail.com"]
   spec.description   = %q{A gem to generate the most basic static web server}
@@ -19,6 +19,8 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
+  spec.add_dependency "trollop"
+  spec.add_dependency "rack"
 
   spec.executables << 'rack'
 end
